@@ -8,139 +8,262 @@
         android:id="@+id/tvCredencialesPrueba"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:text="Test Login:\nUser: admin\nPass: 1234"
-        android:textSize="12sp"
         android:textColor="#888888"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
+    <!-- Menú de navegación -->
     <LinearLayout
         android:id="@+id/menuNavegacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvCredencialesPrueba"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnActividad1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ej 1" />
+            android:text="Ej 1"
+            android:textSize="12sp" />
+
         <Button
             android:id="@+id/btnActividad2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_weight="1"
-            android:text="Ej 2" />
+            android:text="Ej 2"
+            android:textSize="12sp" />
+
         <Button
             android:id="@+id/btnActividad3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_weight="1"
-            android:text="Ej 3" />
+            android:text="Ej 3"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnActividad5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Ej 5"
+            android:textSize="12sp" />
     </LinearLayout>
 
-    <!-- CONTENEDOR ACTIVIDAD 1 -->
-    <LinearLayout
-        android:id="@+id/contenedorEj1"
+    <!-- Contenedor único para evitar repetir posicionamiento en cada tolva -->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/menuNavegacion"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:visibility="visible">
+        android:layout_marginTop="16dp">
 
-        <TextView
-            android:id="@+id/tvTextoEj1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Texto original"
-            android:textSize="20sp"
-            android:layout_marginBottom="16dp"/>
-        <Button
-            android:id="@+id/btnCambiarTextoEj1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cambiar texto" />
-    </LinearLayout>
-
-    <!-- CONTENEDOR ACTIVIDAD 2 -->
-    <LinearLayout
-        android:id="@+id/contenedorEj2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/menuNavegacion"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:visibility="gone">
-
-        <EditText
-            android:id="@+id/etNumero1"
+        <!-- TOLVA 1 -->
+        <LinearLayout
+            android:id="@+id/contenedorEj1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese primer número"
-            android:inputType="numberDecimal" />
-        <EditText
-            android:id="@+id/etNumero2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingrese segundo número"
-            android:inputType="numberDecimal" />
-        <Button
-            android:id="@+id/btnSumarEj2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Sumar" />
-        <TextView
-            android:id="@+id/tvResultadoEj2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="24sp"
-            android:text="Resultado: " />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <!-- CONTENEDOR ACTIVIDAD 3 -->
-    <LinearLayout
-        android:id="@+id/contenedorEj3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/menuNavegacion"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:visibility="gone">
+            <TextView
+                android:id="@+id/tvTextoEj1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Texto original"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tvEstadoLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Intentos restantes: 3"
-            android:layout_marginBottom="16dp"/>
-        <EditText
-            android:id="@+id/etUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre de usuario" />
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:inputType="textPassword" />
-        <Button
-            android:id="@+id/btnValidarEj3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Validar" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnCambiarTextoEj1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar texto" />
+        </LinearLayout>
 
+        <!-- TOLVA 2 -->
+        <LinearLayout
+            android:id="@+id/contenedorEj2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etNumero1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese primer número entero"
+                android:inputType="numberSigned" />
+
+            <EditText
+                android:id="@+id/etNumero2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese segundo número entero"
+                android:inputType="numberSigned" />
+
+            <Button
+                android:id="@+id/btnSumarEj2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sumar" />
+
+            <TextView
+                android:id="@+id/tvResultadoEj2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Resultado: "
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- TOLVA 3 -->
+        <LinearLayout
+            android:id="@+id/contenedorEj3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvEstadoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Intentos restantes: 3" />
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de usuario" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnValidarEj3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Validar" />
+        </LinearLayout>
+
+        <!-- TOLVA 5: SENSORES -->
+        <LinearLayout
+            android:id="@+id/contenedorEj5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Selecciona un sensor:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSensorAccel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Aceleróm."
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSensorLuz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Luz"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSensorProx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Proximidad"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tarjetaCreativaSensor"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="#E3F2FD"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvTituloSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="SENSOR: NINGUNO"
+                    android:textAllCaps="true"
+                    android:textColor="#0D47A1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvInterpretacionCreativa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Elige un sensor arriba para comenzar"
+                    android:textColor="#111111"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/barraNivelSensor"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/tvValoresCrudosSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Valores: --"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
 </RelativeLayout>
